@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   root "home#index"
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:create, :show, :edit, :update]
   resources :posts, except: [:edit, :update]
-  resources :registrations, only: [:new, :create]
-  resources :sessions, only: [:new, :create, :destroy]
+
+  get '/signup', to: 'registrations#new'
+  post '/signup', to: 'registrations#create'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 end

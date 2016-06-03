@@ -1,2 +1,20 @@
-<h1>Registrations#new</h1>
-<p>Find me in app/views/registrations/new.html.erb</p>
+<h1>Sign up</h1>
+
+<%= form_for @user, url: '/signup' do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: "Neil Armstrong" %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: "manonthemoon" %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: "neilbaby@nasa.com" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit %>
+<% end %>
