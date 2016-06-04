@@ -1,9 +1,5 @@
 <p>
   <h3><%= post.content %></h3>
-  <% if post.image_url.present? %>
-    <%= image_tag(post.image_url) %>
-  <% end %>
-  <% if post.video_url.present? %>
-    <%= video_embed_code(post).html_safe %>
-  <% end %>
+  <%= render_image(post) %>
+  <%= render_video(post) %>
 </p>
