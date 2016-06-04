@@ -1,5 +1,9 @@
 <p>
   <h3><%= post.content %></h3>
-  <%= image_tag(post.image_url) unless post.image_url.nil? %>
-  <%= video_embed_code(post).html_safe unless post.video_url.nil? %>
+  <% if post.image_url.present? %>
+    <%= image_tag(post.image_url) %>
+  <% end %>
+  <% if post.video_url.present? %>
+    <%= video_embed_code(post).html_safe %>
+  <% end %>
 </p>
