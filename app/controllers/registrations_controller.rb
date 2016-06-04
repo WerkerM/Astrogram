@@ -4,9 +4,16 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    # create the token hash
-    redirect_to :root
+     @user = User.new(user_params)
+     if @user.save
+      @user.set_confirmation_token
+      @user.save(validate: false)
+      UserMailer.confirmation_email(@user).deliver_now
+      flash[:success] = "Please confirm your email address to continue"
+    else
+      flash[:error] = "Invalid, please try again"
+      render :new
+    end
   end
 
   def edit
