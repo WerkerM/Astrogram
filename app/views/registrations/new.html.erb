@@ -1,20 +1,20 @@
 <h1>Sign up</h1>
 
 <%= form_for @user, url: '/signup' do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, placeholder: "Neil Armstrong" %>
-
-  <%= f.label :username %>
-  <%= f.text_field :username, placeholder: "manonthemoon" %>
-
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: "neilbaby@nasa.com" %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit %>
+<%= f.label :name %>
+<%= f.text_field :name, placeholder: "Neil Armstrong" %>
+<br>
+<%= f.label :username %>
+<%= f.text_field :username, placeholder: "manonthemoon" %>
+<br>
+<%= f.label :email %>
+<%= f.text_field :email, placeholder: "neilbaby@nasa.com" %>
+<br>
+<%= f.label :password %>
+<%= f.password_field :password, placeholder: "Password" %>
+<br>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+<br>
+<%= f.submit %>
 <% end %>
