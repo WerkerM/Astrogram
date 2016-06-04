@@ -1,5 +1,5 @@
 <p>
-  <%= post.content %>
+  <h3><%= post.content %></h3>
   <%= image_tag(post.image_url) unless post.image_url.nil? %>
   <%= video_embed_code(post).html_safe unless post.video_url.nil? %>
 </p>

@@ -6,6 +6,6 @@ module PostHelper
 
   def video_embed_code(post)
     "<iframe width='560' height='315' src='https://www.youtube.com/embed/" +
-     self.video_id(post) + "' frameborder='0' allowfullscreen></iframe>"
+     self.video_id(post) + "?autoplay=1' frameborder='0' allowfullscreen></iframe>"
   end
 end
