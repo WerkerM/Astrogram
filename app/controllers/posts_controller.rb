@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :destroy]
+
   def index
     @posts = Post.all
   end
@@ -12,6 +13,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(post_params)
+    @post.astronaut_id = 1 # placeholder until auth is working
+    @post.save
+    redirect_to 'home#index'
   end
 
   def destroy
@@ -20,5 +25,9 @@ class PostsController < ApplicationController
   private
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def post_params
+    params.require(:post).permit(:content, :astronaut_id, :image_url, :video_url)
   end
 end

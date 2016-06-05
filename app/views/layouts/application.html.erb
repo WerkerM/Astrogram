@@ -6,14 +6,17 @@
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <link href='https://fonts.googleapis.com/css?family=Exo:400,100,300,200,500,600,700,800,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+  <div class="container">
 
-  <%= render "layouts/navbar" %>
+    <%= render "layouts/navbar" %>
+    <%= render "layouts/errors", locals: { current_user: @current_user } %>
 
-  <%= render "layouts/errors", locals: { current_user: @current_user } %>
+    <%= yield %>
 
-  <%= yield %>
+  </div>
 </body>
 </html>

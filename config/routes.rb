@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root "home#index"
   resources :users, only: [:create, :show, :edit, :update]
-  resources :posts#, except: [:edit, :update]
+  resources :posts
+  resources :comments, only: [:create]
+  
   get '/:email_token/confirm_email/', :to => "users#confirm_email", as: 'confirm_email'
   get '/signup', to: 'registrations#new'
   post '/signup', to: 'registrations#create'

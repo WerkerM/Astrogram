@@ -1,0 +1,21 @@
+<div class="new-post">
+  <%= render partial: 'posts/post_author', locals: {post: @post} %>
+  <%= form_for @post do |f| %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image_url, "Image" %>
+    <%= f.text_field :image_url, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :video_url, "Video" %>
+    <%= f.text_field :video_url, class: "form-control" %>
+  </div>
+
+    <%= f.submit :post, class: "btn btn-md" %>
+  <% end %>
+</div>
