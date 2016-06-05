@@ -19,4 +19,10 @@ module PostHelper
   def video_id(post)
     post.video_url.gsub("https://www.youtube.com/watch?v=", "")
   end
+
+  def star_date(post)
+    unless post.created_at.nil?
+      post.created_at.to_datetime.jd.to_s
+    end
+  end
 end
