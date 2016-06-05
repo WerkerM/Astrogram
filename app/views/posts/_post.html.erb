@@ -4,4 +4,5 @@
   <%= render_image(post) %>
   <%= render_video(post) %>
   <%= render 'comments/form' %>
+  <%= render partial: 'comments/comment', collection: post.comments %>
 </div>
