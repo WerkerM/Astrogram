@@ -1,5 +1,7 @@
-<p>
-  <h3><%= post.content %></h3>
+<div class="post">
+  <%= render partial: 'posts/post_author', locals: {post: post} %>
+  <h4><%= post.content %></h4>
   <%= render_image(post) %>
   <%= render_video(post) %>
-</p>
+  <%= render 'comments/form' %>
+</div>

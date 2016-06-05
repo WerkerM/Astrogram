@@ -1,0 +1,8 @@
+<div class = "new-comment">
+  <%= form_for @comment do |f| %>
+    <div class = "form-group">
+      <%= f.text_field :content, class: "form-control" %>
+    </div>
+    <%= f.submit :comment, class: "btn btn-md" %>
+  <% end %>
+</div>
