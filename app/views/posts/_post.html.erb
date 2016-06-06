@@ -3,6 +3,6 @@
   <h4><%= post.content %></h4>
   <%= render_image(post) %>
   <%= render_video(post) %>
-  <%= render 'comments/form' %>
-  <%= render partial: 'comments/comment', collection: post.comments, locals: {post: post} %>
+  <%= render partial: 'comments/form', locals: {post: post} %>
+  <%= render partial: 'comments/comment', collection: post.comments %>
 </div>
