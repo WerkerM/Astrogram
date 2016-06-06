@@ -27,7 +27,7 @@ module PostHelper
 
   def star_date(post)
     unless post.created_at.nil?
-      post.created_at.to_datetime.jd.to_s
+      "<span data-toggle='tooltip' data-placement='bottom' title='stardate'>#{post.created_at.to_datetime.jd.to_s}</span>".html_safe
     end
   end
 end
