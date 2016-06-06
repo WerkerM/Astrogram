@@ -1,8 +1,10 @@
 <div class="post">
   <%= render partial: 'posts/post_author', locals: {post: post} %>
   <h4><%= post.content %></h4>
-  <%= render_image(post) %>
-  <%= render_video(post) %>
-  <%= render partial: 'comments/form', locals: {post: post} %>
+  <div class="media">
+    <%= render_image(post) %>
+    <%= render_video(post) %>
+  </div>
   <%= render partial: 'comments/comment', collection: post.comments %>
+  <%= render partial: 'comments/form', locals: {post: post} %>
 </div>
