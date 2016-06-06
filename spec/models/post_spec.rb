@@ -24,7 +24,8 @@ RSpec.describe Post, type: :model do
   context "when user is attempting to post as an earthling" do
 
     it "won't let non-astronaut make a post" do
-      expect(bad_post.valid?).to be_falsey
+      expect(bad_post.save).to be_falsey
     end
+    
   end
 end
