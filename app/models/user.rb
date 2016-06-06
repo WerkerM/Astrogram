@@ -8,10 +8,12 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  def set_confirmation_token
-    if self.email_token.blank?
-      self.email_token = SecureRandom.urlsafe_base64.to_s
-    end
+  def gen_email_token
+    set_confirmation_token
+  end
+
+  def verify
+    validate_email
   end
 
   def astronaut?
@@ -21,7 +23,13 @@ class User < ApplicationRecord
   private
 
   def validate_email
-    self.email_confirmed = true
+    self.confirmed = true
     self.email_token = nil
+  end
+
+  def set_confirmation_token
+    if self.email_token.blank?
+      self.email_token = SecureRandom.urlsafe_base64.to_s
+    end
   end
 end

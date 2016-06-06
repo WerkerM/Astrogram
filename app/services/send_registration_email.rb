@@ -1,5 +1,5 @@
 class SendRegistrationEmail
-  def self.send(user)
+  def self.send(format, user)
     if user.save
       RegistrationMailer.confirmation_email(user).deliver_now
       format.html { redirect_to(user, notice: 'User was successfully created.') }

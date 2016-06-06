@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :show, :edit, :update]
   resources :posts
   resources :comments, only: [:create]
-  
-  get '/:email_token/confirm_email/', :to => "users#confirm_email", as: 'confirm_email'
+
+  get '/confirm_email/:email_token/', :to => "users#confirm_email", as: 'confirm_email'
   get '/signup', to: 'registrations#new'
   post '/signup', to: 'registrations#create'
 
