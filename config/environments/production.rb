@@ -64,7 +64,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'gmail.com',
     user_name:            'astrogram.mailer.gmail.com',
-    password:             'upupandaway!',
+    password:             ENV,
     authentication:       'plain',
     openssl_verify_mode:  'none',
     enable_starttls_auto: true  }
