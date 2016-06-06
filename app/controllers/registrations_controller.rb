@@ -1,6 +1,8 @@
 class RegistrationsController < ApplicationController
   skip_before_action :redirect_unauthenticated_user
   
+  AcceptedSpaceAgencies = %w(asi.it asc-csa.gc.ca cnes.fr cnsa.gov.cn dlr.de esa.int inpe.br jaxa.jp nasa.gov tsniimash.ru stfc.ac.uk)
+
   def new
     @user = User.new
   end
