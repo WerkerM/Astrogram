@@ -1,7 +1,9 @@
 module PostHelper
 
   def render_post_form
-    render 'posts/form'
+    if current_user && current_user.astronaut?
+      render 'posts/form'
+    end
   end
 
   def render_image(post)

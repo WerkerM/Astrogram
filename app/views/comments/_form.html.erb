@@ -1,6 +1,8 @@
 <div class = "new-comment">
-  <%= form_for @comment do |f| %>
+  <%= form_for post.comments.new do |f| %>
   <div class="form-inline">
+    <%= f.hidden_field :post_id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
     <div class = "form-group">
       <%= f.text_field :content, class: "form-control input-lg" %>
     </div>
