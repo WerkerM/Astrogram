@@ -1,4 +1,9 @@
 module PostHelper
+
+  def render_post_form
+    render 'posts/form'
+  end
+
   def render_image(post)
     if post.image_url.present?
       image_tag(post.image_url)
