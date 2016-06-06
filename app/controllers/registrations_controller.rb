@@ -10,7 +10,14 @@ class RegistrationsController < ApplicationController
   def create
     @user = User.new(user_params)
     respond_to do |format|
-      SendRegistrationEmail.send(@user)
+      if @user.save
+        SendRegistrationEmail.send(@user)
+        format.html { redirect_to(user_path(@user), notice: 'User was successfully created.') }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
 
