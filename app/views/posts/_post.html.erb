@@ -6,5 +6,5 @@
     <%= render_video(post) %>
   </div>
   <%= render partial: 'comments/comment', collection: post.comments %>
-  <%= render partial: 'comments/form', locals: {post: post} %>
+  <%= render partial: 'comments/form', locals: {post: post} unless post.astronaut == current_user %>
 </div>
