@@ -21,6 +21,7 @@ class UsersController < ApplicationController
       email_domain = user.email.split('@')[1]
       if AcceptedSpaceAgencies.include?(email_domain)
         user.astronaut = true
+        user.save
       end
       session[:user_id] = user.id
       redirect_to user
