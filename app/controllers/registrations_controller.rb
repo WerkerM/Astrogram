@@ -1,6 +1,6 @@
 class RegistrationsController < ApplicationController
   skip_before_action :redirect_unauthenticated_user
-  
+
   AcceptedSpaceAgencies = %w(asi.it asc-csa.gc.ca cnes.fr cnsa.gov.cn dlr.de esa.int inpe.br jaxa.jp nasa.gov tsniimash.ru stfc.ac.uk)
 
   def new
@@ -11,8 +11,8 @@ class RegistrationsController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-        RegistrationMailer.confirmation_email(@user).deliver_now
-        format.html { redirect_to(@user, notice: 'User was successfully created.') }
+        SendRegistrationEmail.send(@user)
+        format.html { redirect_to(user_path(@user), notice: 'User was successfully created.') }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: 'new' }
