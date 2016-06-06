@@ -6,20 +6,20 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-     @user = User.new(user_params)
-     if @user.save
-      @user.set_confirmation_token
-      @user.save(validate: false)
-      UserMailer.confirmation_email(@user).deliver_now
-      flash[:success] = "Please confirm your email address to continue"
-    else
-      flash[:error] = "Invalid, please try again"
-      render :new
+    @user = User.new(user_params)
+    respond_to do |format|
+      if @user.save
+        RegistrationMailer.confirmation_email(@user).deliver_now
+        format.html { redirect_to(@user, notice: 'User was successfully created.') }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def edit
-    binding.pry
     @user = User.find_by_email_token(params[:email_token])
     @user.confirmed = true
     redirect_to @user
