@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :followed, foreign_key: "astronaut_id", class_name: "Follow"
   has_many :comments
 
+  validates_presence_of :name, :username, :email
+
   has_secure_password
 
   def set_confirmation_token
