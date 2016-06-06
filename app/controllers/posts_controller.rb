@@ -8,13 +8,8 @@ class PostsController < ApplicationController
   def show
   end
 
-  def new
-    @post = Post.new
-  end
-
   def create
-    @post = Post.new(post_params)
-    @post.astronaut_id = 1 # placeholder until auth is working
+    @post = current_user.posts.new(post_params)
     @post.save
     redirect_to root_path
   end
