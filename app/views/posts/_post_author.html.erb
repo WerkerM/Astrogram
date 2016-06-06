@@ -1,7 +1,7 @@
 <div class="post-author">
   <div class="row">
     <div class="col-xs-2 image"><img src="<%= asset_path( 'astronaut-headshot.png' ) %>"></div>
-    <div class="col-xs-8 username"><h3>georgiebaby</h3></div>
+    <div class="col-xs-8 username"><h3><%= post.astronaut.name %></h3></div>
     <div class="col-xs-2 timestamp"><%= star_date(post) %></div>
   </div>
 </div>

@@ -9,8 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.astronaut = current_user
+    @post = current_user.posts.new(post_params)
     @post.save
     redirect_to root_path
   end

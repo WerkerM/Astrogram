@@ -1,4 +1,3 @@
-<% if current_user.astronaut? %>
   <div class="new-post">
     <%= render partial: 'posts/post_author', locals: {post: @post} %>
     <%= form_for @post do |f| %>
@@ -18,4 +17,3 @@
     <% end %>
     <div class="media-preview"></div>
   </div>
-<% end %>
