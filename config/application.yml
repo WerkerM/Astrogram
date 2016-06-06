@@ -1,1 +1,3 @@
-
+GMAIL_USERNAME: "astrogram.mailer@gmail.com"
+GMAIL_PASSWORD: "upupandaway!"
+EMAIL_HOST: "http://astrogram.herokuapp.com"

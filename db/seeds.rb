@@ -9,7 +9,7 @@
 user1 = User.create(name: "George", username: "georgebaby", email: "george@george.com", password: "password", password_confirmation: "password")
 user2 = User.create(name: "Frank", username: "frankiebaby", email: "fronk@fronk.com", password: "password", password_confirmation: "password", astronaut: true)
 user3 = User.create(name: "Steve", username: "steviebaby", email: "steev@steev.com", password: "password", password_confirmation: "password", astronaut: true)
-user4 = User.create(name: "Smiiiiiiiitty", username: "smittybaby", email: "smitty@smitty.com", password: "password", password_confirmation: "password")
+user4 = User.create(name: "Smiiiiiiiitty", username: "smittybaby", email: "smitty@smitty.com", password: "password", password_confirmation: "password", astronaut: true)
 user5 = User.create(name: "Jimmy", username: "jimbaby", email: "jim@jim.com", password: "password", password_confirmation: "password")
 user6 = User.create(name: "Too Cool for a Name", username: "2cool4u", email: "toocool@4school.com", password: "password", password_confirmation: "password")
 
@@ -27,8 +27,8 @@ post2 = Post.create(content: "Look ma, no hands!", image_url: "https://upload.wi
 post3 = Post.create(content: "Ugh, damn gamma rays keep making my eyeballs light up. Not fun.", astronaut: user3)
 post4 = Post.create(content: "Whoa... what was that thing that zoomed by us just now? Didn't seem American... didn't even seem human. Pretty odd.", astronaut: user3)
 post5 = Post.create(content: "Exploring anti-gravity sports! Who wants to play??", video_url: "https://www.youtube.com/watch?v=4IYDb6K5UF8", astronaut: user3)
-post6 = Post.create(content: "Went starwalking today...", image_url: "http://apod.nasa.gov/apod/image/1605/NGC5078-LRGBhager1024.jpg")
-post7 = Post.create(content: "Первый Урок! Ыюм пыртенакж констятюам ат, заэпы волуптюа пэрчыквюэрёж мэль эи, конгуы оффэндйт конкльюдатюрквюэ вяш ку.", video_url: "https://www.youtube.com/watch?v=3jr2m_oEGcU")
+post6 = Post.create(content: "Went starwalking today...", image_url: "http://apod.nasa.gov/apod/image/1605/NGC5078-LRGBhager1024.jpg", astronaut: user2)
+post7 = Post.create(content: "Первый Урок! Ыюм пыртенакж констятюам ат, заэпы волуптюа пэрчыквюэрёж мэль эи, конгуы оффэндйт конкльюдатюрквюэ вяш ку.", video_url: "https://www.youtube.com/watch?v=3jr2m_oEGcU", astronaut: user2)
 post8 = Post.create(content: "So sick of freeze dried ice cream. FML.", astronaut: user4)
 post9 = Post.create(content: "Another gorgeous day up here!", image_url: "http://www.nasa.gov/sites/default/files/11572307115_1194957269_o_0.jpg", astronaut: user2)
 
