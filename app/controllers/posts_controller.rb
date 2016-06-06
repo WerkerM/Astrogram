@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.astronaut_id = 1 # placeholder until auth is working
     @post.save
-    redirect_to 'home#index'
+    redirect_to root_path
   end
 
   def destroy
