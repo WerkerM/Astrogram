@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  skip_before_action :redirect_unauthenticated_user
+
   def index
     @post = Post.new
     @comment = Comment.new
