@@ -2,15 +2,15 @@
   <%= render partial: 'posts/post_author', locals: {post: @post} %>
   <%= form_for @post do |f| %>
   <div class="form-group">
-    <%= f.text_area :content, placeholder: "What's happening?", class: "form-control input-lg" %>
+    <%= f.text_area :content, placeholder: "What's happening in space?", class: "form-control input-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.text_field :image_url, placeholder: "Paste image link", class: "form-control input-lg" %>
+    <%= f.text_field :image_url, placeholder: "Image link", class: "form-control input-lg" %>
   </div>
 
   <div class="form-group">
-    <%= f.text_field :video_url, placeholder: "Paste video link", class: "form-control input-lg" %>
+    <%= f.text_field :video_url, placeholder: "Video link", class: "form-control input-lg" %>
   </div>
 
     <%= f.submit :post, class: "btn btn-default btn-lg" %>
