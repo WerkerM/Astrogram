@@ -5,4 +5,6 @@ class Post < ApplicationRecord
   has_many :comments
   validates_with PosterIsAstronaut
 
+  mount_uploader :image_url, ImageUploader
+
 end
