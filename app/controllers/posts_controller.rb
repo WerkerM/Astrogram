@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.astronaut_id = 1 # placeholder until auth is working
+    @post.astronaut = current_user
     @post.save
     redirect_to root_path
   end
