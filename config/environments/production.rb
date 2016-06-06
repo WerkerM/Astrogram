@@ -63,8 +63,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'astrogram.mailer.gmail.com',
-    password:             'upupandaway!',
+    user_name:            ENV['GMAIL_USERNAME'],
+    password:             ENV['GMAIL_PASSWORD'],
     authentication:       'plain',
     openssl_verify_mode:  'none',
     enable_starttls_auto: true  }
