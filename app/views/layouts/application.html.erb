@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Astrogram</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Astrogram</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <link href='https://fonts.googleapis.com/css?family=Exo:400,100,300,200,500,600,700,800,900' rel='stylesheet' type='text/css'>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <link href='https://fonts.googleapis.com/css?family=Exo:400,100,300,200,500,600,700,800,900' rel='stylesheet' type='text/css'>
+</head>
 
-  <body>
-    <div class="container">
-      <div class = "col-xs-12 center-block">
-      <%= yield %>
-    </div>
-    </div>
-  </body>
+<body>
+  <div class="container">
+
+    <%= render "layouts/navbar" %>
+    <%= render "layouts/errors", locals: { current_user: @current_user } %>
+
+    <%= yield %>
+
+  </div>
+</body>
 </html>
