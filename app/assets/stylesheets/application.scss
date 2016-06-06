@@ -18,11 +18,22 @@
 @import "home";
 @import "users";
 
-
 .navbar {
   background-color: white;
   border:0px;
   margin-bottom:50px;
+  margin-top:10px;
+}
+
+.auth-state {
+  margin-left: 42px;
+  margin-top: 25px;
+  padding:10px;
+  width:600px;
+  height:40px;
+  background-color: black;
+  border-top: 2px dotted white;
+  border-bottom: 2px dotted white;
 }
 
 body {
@@ -35,9 +46,9 @@ body {
 .site-title {
     margin-top: 25px;
     margin-left: 25px;
-    font-size: 75px;
+    font-size: 100px;
     font-weight: 600;
     color: white;
-    text-shadow: 2px 2px 8px black;
-    -webkit-text-stroke: 0.5px black;
+    text-shadow: 0px 2px 12px black;
+    -webkit-text-stroke: 1px #222222;
 }
