@@ -1,4 +1,9 @@
 module PostHelper
+
+  def render_post_form
+    render 'posts/form'
+  end
+
   def render_image(post)
     if post.image_url.present?
       image_tag(post.image_url)
@@ -22,7 +27,7 @@ module PostHelper
 
   def star_date(post)
     unless post.created_at.nil?
-      post.created_at.to_datetime.jd.to_s
+      "<span data-toggle='tooltip' data-placement='bottom' title='stardate'>#{post.created_at.to_datetime.jd.to_s}</span>".html_safe
     end
   end
 end

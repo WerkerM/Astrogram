@@ -1,3 +1,19 @@
 .new-comment {
   margin: 10px 0px 10px 0px;
 }
+
+.comment {
+  margin-top: 5px;
+  .image img {
+    text-align: left;
+    max-height: 35px;
+    max-width: 35px;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 50%;
+  }
+  .username {
+  }
+  .content {
+    margin-top: 10px;
+  }
+}

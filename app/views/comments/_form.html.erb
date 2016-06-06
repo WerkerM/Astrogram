@@ -1,8 +1,10 @@
 <div class = "new-comment">
   <%= form_for @comment do |f| %>
+  <div class="form-inline">
     <div class = "form-group">
-      <%= f.text_field :content, class: "form-control" %>
+      <%= f.text_field :content, class: "form-control input-lg" %>
     </div>
-    <%= f.submit :comment, class: "btn btn-md" %>
+    <%= f.submit :comment, class: "btn btn-default btn-lg" %>
+  </div>
   <% end %>
 </div>
