@@ -6,7 +6,8 @@ RSpec.describe Post, type: :model do
   let(:new_earthling) {User.create!(name: "Muggle1", username: "Cobbler", astronaut: false, password: "asdf")}
   let(:new_post) {Post.create!(content: "I'm a great post", astronaut: new_astronaut)}
   let(:bad_post) {Post.new(content: "Earth is cool too!!!", astronaut: new_earthling)}
-  context "when poster is an astronaut" do
+
+  context "when user is posting as an astronaut" do
 
     it 'knows its author' do
       expect(new_post.astronaut).to eq(new_astronaut)
@@ -20,7 +21,7 @@ RSpec.describe Post, type: :model do
     end
   end
 
-  context "when poster is an earthling" do
+  context "when user is attempting to post as an earthling" do
 
     it "won't let non-astronaut make a post" do
       expect(bad_post.valid?).to be_falsey
