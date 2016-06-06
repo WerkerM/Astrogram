@@ -18,6 +18,26 @@
 @import "home";
 @import "users";
 
+
+.navbar {
+  background-color: white;
+  border:0px;
+  margin-bottom:50px;
+}
+
 body {
   font-family: 'Exo', sans-serif;
+  a {
+    color: #1DDDE3;
+  }
+}
+
+.site-title {
+    margin-top: 25px;
+    margin-left: 25px;
+    font-size: 75px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+    -webkit-text-stroke: 0.5px black;
 }
