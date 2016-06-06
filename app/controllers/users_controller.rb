@@ -23,7 +23,6 @@ class UsersController < ApplicationController
         user.astronaut = true
       end
       session[:user_id] = user.id
-      binding.pry
       redirect_to user
     else
       flash[:error] = "Sorry. User does not exist"

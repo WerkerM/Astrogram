@@ -7,7 +7,6 @@ class RegistrationMailer < ApplicationMailer
     user.save!
     @user = user
     @url  = "http://localhost:3000/confirm_email/#{token}"
-    binding.pry
     mail(from: 'astrogram.mailer@gmail.com', to: @user.email, subject: 'Verify Your Astrogram Account!')
   end
 
