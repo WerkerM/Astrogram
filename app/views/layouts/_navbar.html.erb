@@ -1,4 +1,10 @@
-<div id="navbar">
-  <a href="/"><%= image_tag "logo_medium.png" %></a>
-    <%= navbar_logged_in %>
-</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <div class="site-title">Astrogram</div>
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="auth-state"><%= navbar_logged_in %></div>
