@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.row {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .user {
   width:600px;
   border: 1px solid #999999;
@@ -10,6 +16,7 @@
   padding:20px;
   margin:40px;
   .image img {
+    vertical-align: middle;
     text-align: left;
     max-height: 70px;
     max-width: 70px;
@@ -17,6 +24,8 @@
     border-radius: 50%;
   }
   .username {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .glyphicon {
     display: inline-block;
@@ -29,6 +38,13 @@
     vertical-align: middle;
     margin-left:10px;
     font-size:112%;
+  }
+  img.space-badge {
+    max-width: 130px;
+    height: auto;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 50%;
+    margin-left: 5px;
   }
 }
 
