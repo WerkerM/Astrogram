@@ -1,4 +1,4 @@
-class PersonalizeFeed
+class FeedPersonalizer
   def self.create(user)
     if user.nil?
       @posts = Post.last(5)
