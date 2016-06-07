@@ -1,10 +1,12 @@
 module UsersHelper
 
   def render_follow_button(astronaut, user)
-    if astronaut.followed_by?(user)
-      follow_button_markup(following).html_safe
-    else
-      follow_button_markup(follow).html_safe
+    if astronaut.astronaut? && astronaut != current_user
+      if astronaut.followed_by?(user)
+        follow_button_markup(following).html_safe
+      else
+        follow_button_markup(follow).html_safe
+      end
     end
   end
 

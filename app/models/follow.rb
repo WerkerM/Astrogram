@@ -6,6 +6,6 @@ class Follow < ApplicationRecord
 
   validates_with PosterIsAstronaut
   validates_presence_of :user, :astronaut
-  validates_uniqueness_of :astronaut_id, :scope => :user_id
+  # validates_uniqueness_of :astronaut_id, :scope => :user_id
 
 end
