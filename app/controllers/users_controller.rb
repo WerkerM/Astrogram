@@ -1,14 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show]
   skip_before_action :redirect_unauthenticated_user, only: :confirm_email
 
   def show
-  end
-
-  def edit
-  end
-
-  def update
   end
 
   def confirm_email
