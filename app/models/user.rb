@@ -27,16 +27,4 @@ class User < ApplicationRecord
     self.followed.where(user: user).any? ? true : false
   end
 
-  private
-
-  def validate_email
-    self.confirmed = true
-    self.email_token = nil
-  end
-
-  def set_confirmation_token
-    if self.email_token.blank?
-      self.email_token = SecureRandom.urlsafe_base64.to_s
-    end
-  end
 end
