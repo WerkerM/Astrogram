@@ -61,6 +61,7 @@ astronaut30 = User.create(name: "Maurizio Cheli", username: "maurice", email: "m
 astronaut31 = User.create(name: "Buzz Lightyear", username: "buzzlightyear", email: "buzz@space-rangers.space", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
 astronaut32 = User.create(name: "Justin Nazari", username: "jspaceman", email: "justin@space-rangers.space", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
 astronaut33 = User.create(name: "Jean-Luc Picard", username: "jeanluc", email: "jeanluc@starfleet.gov", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
+astronaut34 = User.create(name: "Antoin Campbell", username: "antoinbaby", email: "jeanluc@nasa.gov", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
 
 
 follow1 = Follow.create(user: user1, astronaut: astronaut1)
@@ -92,7 +93,7 @@ follow25 = Follow.create(user: user8, astronaut: astronaut18)
 follow26 = Follow.create(user: user6, astronaut: astronaut9)
 
 post1 = Post.create(content: "Omg! I'm posting from SPAAAAACE!", video_url: "https://www.youtube.com/watch?v=SGP6Y0Pnhe4", astronaut: astronaut2)
-post2 = Post.create(content: "Look ma, no hands!", image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sunita_Williams_astronaut_spacewalk.jpg", astronaut: astronaut5)
+post2 = Post.create(content: "So quiet up here.", image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sunita_Williams_astronaut_spacewalk.jpg", astronaut: astronaut5)
 post3 = Post.create(content: "Ugh, damn gamma rays keep making my eyeballs light up. Not fun.", astronaut: astronaut1)
 post4 = Post.create(content: "Whoa... what was that thing that zoomed by us just now? Didn't seem American... didn't even seem human. Pretty odd.", astronaut: astronaut4)
 post5 = Post.create(content: "Exploring anti-gravity sports! Who wants to play??", video_url: "https://www.youtube.com/watch?v=4IYDb6K5UF8", astronaut: astronaut8)
@@ -109,6 +110,7 @@ post16 = Post.create(content: "Thank God for this spacesuit: the solar radiation
 post17 = Post.create(content: "This is the life for me.", astronaut: astronaut5)
 post18 = Post.create(content: "Deep space. The loneliest place of all.", image_url: "http://wallpaperswide.com/deep_space-wallpapers.html", astronaut: astronaut24)
 post19 = Post.create(content: "So glad to be coming home soon. I miss my family.", astronaut: astronaut31)
+post20 = Post.create(content: "Whoa! Zero grav is FREAKIN' me out, man! Ahhhhhhhh!!!", astronaut: astronaut34)
 
 comment1 = Comment.create(content: "Having fun up there??", post: post1, user: user1)
 comment2 = Comment.create(content: "Dude! That's so cool! We're all jealous of you down here :D", post: post1, user: user5)
@@ -130,3 +132,4 @@ comment17 = Comment.create(content: "Coffee > tea, you silly Brit", post: post12
 comment18 = Comment.create(content: "It really is.", post: post13, user: user19)
 comment19 = Comment.create(content: "Whoa dude. Check out that view!", post: post16, user: user2)
 comment20 = Comment.create(content: "*eats his sirloin and pities you*", post: post14, user: user6)
+comment21 = Comment.create(content: "Antoin! Remember! The enemy's gate is down!", post: post20, user: user11)
