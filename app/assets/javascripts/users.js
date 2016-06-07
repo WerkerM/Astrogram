@@ -12,7 +12,6 @@ function updateFollows() {
       url: '/follows',
       data: {follow: {astronaut_id: astronaut_id}}
     }).done(function(response) {
-      console.log(response)
       showFollow(response)
     })
   })
@@ -20,7 +19,6 @@ function updateFollows() {
 
 function showFollow(response) {
   var status = response["status"]
-  console.log(status)
   if (status === "following") {
     $('.follow-button').text('following!')
   }
