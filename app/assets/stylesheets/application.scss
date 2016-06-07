@@ -18,8 +18,13 @@
 @import "home";
 @import "users";
 
+.container-fluid {
+  width: 720px;
+  margin: 0 auto;
+}
+
 .navbar {
-  background-color: white;
+  background-color:white;
   border:0px;
   margin-bottom:50px;
   margin-top:10px;

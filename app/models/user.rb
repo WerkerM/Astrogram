@@ -23,4 +23,8 @@ class User < ApplicationRecord
     return self.astronaut
   end
 
+  def followed_by?(user)
+    self.followed.where(user: user).any? ? true : false
+  end
+
 end
