@@ -26,7 +26,7 @@ user17 = User.create(name: "Rachel McAdams", username: "rachel", email: "rachel@
 user18 = User.create(name: "George Costanza", username: "huehuehueHUEHUEHUEhuehuehue", email: "georgehatesclowns@gmail.com", password: "password", password_confirmation: "password")
 user19 = User.create(name: "Mary Elizabeth Masterson", username: "marymaster", email: "mary@masterson.com", password: "password", password_confirmation: "password")
 user20 = User.create(name: "Frankie Baby", username: "thegreatsinatra", email: "sinatra@ratpack.com", password: "password", password_confirmation: "password")
-user20 = User.create(name: "Woody", username: "woodybaby", email: "sadearthman@gmail.com", password: "password", password_confirmation: "password")
+user21 = User.create(name: "Woody", username: "woody", email: "sadearthman@gmail.com", password: "password", password_confirmation: "password")
 
 astronaut1 = User.create(name: "Philip K. Chapman", username: "philip", email: "philchappy@nasa.gov", password: "password", password_confirmation: "password", astronaut: true)
 astronaut2 = User.create(name: "Ellen S. Baker", username: "ellenbaker", email: "ellen@nasa.gov", password: "password", password_confirmation: "password", astronaut: true)
@@ -59,8 +59,8 @@ astronaut28 = User.create(name: "Chris Hadfield", username: "chrishadfield", ema
 astronaut29 = User.create(name: "Pavel Popovich", username: "pavel", email: "pavel@tsniimash.ru", password: "password", password_confirmation: "password", astronaut: true)
 astronaut30 = User.create(name: "Maurizio Cheli", username: "maurice", email: "mauricio@asi.it", password: "password", password_confirmation: "password", astronaut: true)
 astronaut31 = User.create(name: "Buzz Lightyear", username: "buzzlightyear", email: "buzz@space-rangers.space", password: "password", password_confirmation: "password", astronaut: true)
-astronaut31 = User.create(name: "Justin Nazari", username: "jspaceman", email: "justin@space-rangers.space", password: "password", password_confirmation: "password", astronaut: true)
-astronaut31 = User.create(name: "Jean-Luc Picard", username: "jeanluc", email: "jeanluc@starfleet.gov", password: "password", password_confirmation: "password", astronaut: true)
+astronaut32 = User.create(name: "Justin Nazari", username: "jspaceman", email: "justin@space-rangers.space", password: "password", password_confirmation: "password", astronaut: true)
+astronaut33 = User.create(name: "Jean-Luc Picard", username: "jeanluc", email: "jeanluc@starfleet.gov", password: "password", password_confirmation: "password", astronaut: true)
 
 
 follow1 = Follow.create(user: user1, astronaut: astronaut1)
