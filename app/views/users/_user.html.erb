@@ -1,7 +1,9 @@
 <div class="user">
   <div class="row">
     <div class="col-xs-2 image"><img src="<%= asset_path( 'astronaut-headshot.png' ) %>"></div>
-    <div class="col-xs-6 username"><h3><%= user.name %></h3></div>
-    <div class="col-xs-4"></br><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span><div class="verification">Verified Astronaut</div></div>
+    <div class="col-xs-2"><h3 class="username"><%= user.name %></h3></div>
+    <div class="col-xs-8">
+    <%= view_if_astronaut %>
+    </div>
   </div>
 </div>
