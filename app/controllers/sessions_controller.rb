@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(username: login_params[:username])
-    if AccountVerifier.with_email_verification(user)
-      SetSession.session_for(user)
+    if AccountVerifier.with_email_verification(user, login_params)
+      session[:user_id] = user.id
       redirect_to root_path, notice: "You have successfully logged in! Shine on, you crazy diamond."
     elsif AccountVerifier.without_email_verification(user)
       redirect_to login_path, notice: "Please verify your email address."
