@@ -4,7 +4,10 @@ class HomeController < ApplicationController
   def index
     if current_user
       @post = current_user.posts.build
+      followed_astronaut_ids = current_user.following.pluck(:astronaut_id)
+      @posts = Post.where(astronaut_id: followed_astronaut_ids)
+    else
+      @posts = Post.last(5)
     end
-      @posts = Post.all.order(created_at: :desc).take(10)
   end
 end

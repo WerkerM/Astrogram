@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :show, :edit, :update]
   resources :posts
   resources :comments, only: [:create]
-  resources :follows, only: [:create]
+
 
   get '/confirm_email/:email_token/', :to => "users#confirm_email", as: 'confirm_email'
   get '/signup', to: 'registrations#new'
@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  post '/follows', to: 'follows#create'
 end
