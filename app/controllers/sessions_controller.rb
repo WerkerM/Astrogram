@@ -6,14 +6,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(username: login_params[:username])
-    if @user && @user.authenticate(login_params[:password])
-      session[:user_id] = @user.id
+    user = User.find_by(username: login_params[:username])
+    if AccountVerifier.with_email_verification(user)
+      SetSession.session_for(user)
       redirect_to root_path, notice: "You have successfully logged in! Shine on, you crazy diamond."
+    elsif AccountVerifier.without_email_verification(user)
+      redirect_to login_path, notice: "Please verify your email address."
     else
-      @user = User.new
-      flash.now[:alert] = "There was a problem with your login; please try again."
-      render :new
+      redirect_to login_path, alert: "There was a problem with your login; please try again."
     end
   end
 

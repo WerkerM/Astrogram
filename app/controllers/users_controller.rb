@@ -8,8 +8,8 @@ class UsersController < ApplicationController
   def confirm_email
     user = User.find_by_email_token(params[:email_token])
     if user
-      VerifyUser.verified(user)
-      session[:user_id] = user.id
+      VerifyEmail.verified(user)
+      SetSession.session_for(user)
       redirect_to user
     else
       flash[:error] = "Sorry. User does not exist"
