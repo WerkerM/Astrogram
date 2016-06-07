@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-        SendRegistrationEmail.send(@user)
+        RegistrationEmailer.send(@user)
         format.html { redirect_to(user_path(@user), notice: 'User was successfully created.') }
         format.json { render json: @user, status: :created, location: @user }
       else
