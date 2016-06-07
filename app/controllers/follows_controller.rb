@@ -2,7 +2,7 @@ class FollowsController < ApplicationController
   def create
     astronaut = User.find_by(id: follow_params[:astronaut_id])
     user = current_user
-    @update = UpdateFollows.new(astronaut, user).do
+    @update = FollowUpdater.new(astronaut, user).do
     render json: @update
   end
 

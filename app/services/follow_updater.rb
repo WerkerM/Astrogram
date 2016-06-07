@@ -1,4 +1,4 @@
-class UpdateFollows
+class FollowUpdater
   attr_accessor :astronaut, :user
 
   def initialize(astronaut, user)
