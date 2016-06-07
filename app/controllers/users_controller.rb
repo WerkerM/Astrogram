@@ -23,7 +23,13 @@ class UsersController < ApplicationController
   end
 
   def astronauts
-    @astronauts = User.where(astronaut: true)
+    @users = User.where(astronaut: true)
+    render :index
+  end
+
+  def earthlings
+    @users = User.where(astronaut: false)
+    render :index
   end
 
   private
