@@ -3,6 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @posts = PersonalizeFeed.create(current_user)
-    @post = current_user.posts.build unless current_user.nil?
+    @post = current_user.posts.build if current_user
   end
 end
