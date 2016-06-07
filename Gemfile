@@ -40,6 +40,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara-webkit'
   gem 'figaro'
+  gem 'rails-controller-testing'
 end
 
 group :development do

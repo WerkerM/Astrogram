@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   skip_before_action :redirect_unauthenticated_user, only: :confirm_email
 
   def show
-    if @user
+    if AccountVerifier.with_email_verification(@user)
       render :show
     else
       redirect_to root_path, alert: "User does not exist."
