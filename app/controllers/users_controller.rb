@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     user = User.find_by_email_token(params[:email_token])
     if user
       VerifyEmail.verified(user)
-      SetSession.session_for(user)
+      session[:user_id] = user.id
       redirect_to user
     else
       flash[:error] = "Sorry. User does not exist"
