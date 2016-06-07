@@ -5,6 +5,11 @@ class UsersController < ApplicationController
   AcceptedSpaceAgencies = %w(asi.it asc-csa.gc.ca cnes.fr cnsa.gov.cn dlr.de esa.int inpe.br jaxa.jp nasa.gov tsniimash.ru stfc.ac.uk)
 
   def show
+    if @user
+      render :show
+    else
+      redirect_to root_path, alert: "User does not exist."
+    end
   end
 
   def edit
@@ -31,8 +36,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def astronauts
+    @astronauts = User.where(astronaut: true)
+  end
+
   private
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
   end
 end
