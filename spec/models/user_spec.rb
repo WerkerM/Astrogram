@@ -33,7 +33,6 @@ RSpec.describe User, type: :model do
       expect(new_astronaut.astronaut?).to be_truthy
     end
 
-
     it "knows its follows" do
       expect(new_astronaut.followed).to include(new_follow)
     end
