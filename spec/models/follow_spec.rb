@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Follow, type: :model do
+describe Follow, type: :model do
 
   # has both a user and an astronaut
   # its astronaut is actually an astronaut
@@ -23,6 +23,6 @@ RSpec.describe Follow, type: :model do
     it "isn't valid" do
       expect(bad_follow.save).to be_falsey
     end
-    
+
   end
 end
