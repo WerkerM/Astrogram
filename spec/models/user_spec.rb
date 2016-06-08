@@ -10,16 +10,16 @@ RSpec.describe User, type: :model do
   let(:bad_follow) { Follow.new(user: new_astronaut, astronaut: new_earthling) }
 
   it "can set an email confirmation token once" do
-    new_astronaut.send(:set_confirmation_token)
+    new_astronaut.gen_email_token
     expect(new_astronaut.email_token).to be_a(String)
 
     token = new_astronaut.email_token
-    new_astronaut.send(:set_confirmation_token)
+    new_astronaut.gen_email_token
     expect(new_astronaut.email_token).to eq(token)
   end
 
   it "can validate its email" do
-    new_astronaut.send(:validate_email)
+    new_astronaut.verify
     expect(new_astronaut.confirmed).to be_truthy
     expect(new_astronaut.email_token).to be_nil
   end

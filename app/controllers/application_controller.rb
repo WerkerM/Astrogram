@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_unauthenticated_user
-    if @current_user.nil?
+    if current_user.nil?
       session[:user_id] = nil
       redirect_to login_path
     end
