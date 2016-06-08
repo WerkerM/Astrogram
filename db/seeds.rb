@@ -92,70 +92,49 @@ follow24 = Follow.create(user: user16, astronaut: astronaut28)
 follow25 = Follow.create(user: user8, astronaut: astronaut18)
 follow26 = Follow.create(user: user6, astronaut: astronaut9)
 
-post1  = Post.create!(content: "Omg! I'm posting from SPAAAAACE!", video_url: "https://www.youtube.com/watch?v=SGP6Y0Pnhe4", astronaut: astronaut2)
-puts post1.errors
-post2  = Post.create!(content: "Look ma, no hands!", image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sunita_Williams_astronaut_spacewalk.jpg", astronaut: astronaut5)
-puts post2.errors
-post3  = Post.create!(content: "Ugh, damn gamma rays keep making my eyeballs light up. Not fun.", astronaut: astronaut1)
-puts post3.errors
-post4  = Post.create!(content: "Whoa... what was that thing that zoomed by us just now? Didn't seem American... didn't even seem human. Pretty odd.", astronaut: astronaut4)
-puts post4.errors
-post5  = Post.create!(content: "Exploring anti-gravity sports! Who wants to play??", video_url: "https://www.youtube.com/watch?v=4IYDb6K5UF8", astronaut: astronaut8)
-puts post5.errors
-post6  = Post.create!(content: "Went starwalking today...", image_url: "http://apod.nasa.gov/apod/image/1605/NGC5078-LRGBhager1024.jpg", astronaut: astronaut25)
-puts post6.errors
-post7  = Post.create!(content: "Первый Урок! Ыюм пыртенакж констятюам ат, заэпы волуптюа пэрчыквюэрёж мэль эи, конгуы оффэндйт конкльюдатюрквюэ вяш ку.", video_url: "https://www.youtube.com/watch?v=3jr2m_oEGcU", astronaut: astronaut15)
-puts post7.errors
-post8  = Post.create!(content: "So sick of freeze dried ice cream. FML.", astronaut: astronaut19)
-puts post8.errors
-post9  = Post.create!(content: "Another gorgeous day up here!", image_url: "http://www.nasa.gov/sites/default/files/11572307115_1194957269_o_0.jpg", astronaut: astronaut22)
-puts post9.errors
-post10 = Post.create!(content: "Everything smells so nice up here... away from the smelly people on Earth :P", astronaut: astronaut12)
-puts post10.errors
-post11 = Post.create!(content: "Near Venus. Can't tell if I'm feeling extra amorous or not.", astronaut: astronaut12)
-puts post11.errors
-post12 = Post.create!(content: "Pip pip! The tea up here is just awful!", astronaut: astronaut17)
-puts post12.errors
-post13 = Post.create!(content: "The earth is so beautiful.", image_url: "http://science-all.com/images/wallpapers/earth-from-space/earth-from-space-12.jpg", astronaut: astronaut30)
-puts post13.errors
-post14 = Post.create!(content: "Another day of space rations.", image_url: "https://3.bp.blogspot.com/-C9vIkfTxnE8/VXCilBLgK2I/AAAAAAABPcU/IAZqTnjO0Io/s1600/MREs.jpg", astronaut: astronaut20)
-puts post14.errors
-post15 = Post.create!(content: "On the moon!", image_url: "https://www.hq.nasa.gov/alsj/a17/a17-21493and96.jpg", astronaut: astronaut12)
-puts post15.errors
-post16 = Post.create!(content: "Thank God for this spacesuit: the solar radiation is so strong this close.", image_url: "http://i1.mirror.co.uk/incoming/article2483007.ece/ALTERNATES/s1227b/Close-up-of-the-Sun-showing-a-solar-prominence-and-a-sunspot.jpg", astronaut: astronaut2)
-puts post16.errors
-post17 = Post.create!(content: "This is the life for me.", astronaut: astronaut5)
-puts post17.errors
-post18 = Post.create!(content: "Deep space. The loneliest place of all.", image_url: "http://wallpaperswide.com/deep_space-wallpapers.html", astronaut: astronaut24)
-puts post18.errors
-post19 = Post.create!(content: "So glad to be coming home soon. I miss my family.", astronaut: astronaut31)
-puts post19.errors
-post20 = Post.create!(content: "Whoa! Zero grav is FREAKIN' me out, man! Ahhhhhhhh!!!", astronaut: astronaut34)
-puts post20.errors
-post21 = Post.create!(content: "Woof! Woof woof! Aroooooooooooo!!", astronaut: astronaut35)
-puts post21.errors
+post1  = Post.create(content: "Omg! I'm posting from SPAAAAACE!", video_url: "https://www.youtube.com/watch?v=SGP6Y0Pnhe4", astronaut: astronaut2)
+post2  = Post.create(content: "Look ma, no hands!", image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sunita_Williams_astronaut_spacewalk.jpg", astronaut: astronaut5)
+post3  = Post.create(content: "Ugh, damn gamma rays keep making my eyeballs light up. Not fun.", astronaut: astronaut1)
+post4  = Post.create(content: "Whoa... what was that thing that zoomed by us just now? Didn't seem American... didn't even seem human. Pretty odd.", astronaut: astronaut4)
+post5  = Post.create(content: "Exploring anti-gravity sports! Who wants to play??", video_url: "https://www.youtube.com/watch?v=4IYDb6K5UF8", astronaut: astronaut8)
+post6  = Post.create(content: "Went starwalking today...", image_url: "http://apod.nasa.gov/apod/image/1605/NGC5078-LRGBhager1024.jpg", astronaut: astronaut25)
+post7  = Post.create(content: "Первый Урок! Ыюм пыртенакж констятюам ат, заэпы волуптюа пэрчыквюэрёж мэль эи, конгуы оффэндйт конкльюдатюрквюэ вяш ку.", video_url: "https://www.youtube.com/watch?v=3jr2m_oEGcU", astronaut: astronaut15)
+post8  = Post.create(content: "So sick of freeze dried ice cream. FML.", astronaut: astronaut19)
+post9  = Post.create(content: "Another gorgeous day up here!", image_url: "http://www.nasa.gov/sites/default/files/11572307115_1194957269_o_0.jpg", astronaut: astronaut22)
+post10 = Post.create(content: "Everything smells so nice up here... away from the smelly people on Earth :P", astronaut: astronaut12)
+post11 = Post.create(content: "Near Venus. Can't tell if I'm feeling extra amorous or not.", astronaut: astronaut12)
+post12 = Post.create(content: "Pip pip! The tea up here is just awful!", astronaut: astronaut17)
+post13 = Post.create(content: "The earth is so beautiful.", image_url: "http://science-all.com/images/wallpapers/earth-from-space/earth-from-space-12.jpg", astronaut: astronaut30)
+post14 = Post.create(content: "Another day of space rations.", image_url: "https://3.bp.blogspot.com/-C9vIkfTxnE8/VXCilBLgK2I/AAAAAAABPcU/IAZqTnjO0Io/s1600/MREs.jpg", astronaut: astronaut20)
+post15 = Post.create(content: "On the moon!", image_url: "https://www.hq.nasa.gov/alsj/a17/a17-21493and96.jpg", astronaut: astronaut12)
+post16 = Post.create(content: "Thank God for this spacesuit: the solar radiation is so strong this close.", image_url: "http://i1.mirror.co.uk/incoming/article2483007.ece/ALTERNATES/s1227b/Close-up-of-the-Sun-showing-a-solar-prominence-and-a-sunspot.jpg", astronaut: astronaut2)
+post17 = Post.create(content: "This is the life for me.", astronaut: astronaut5)
+post18 = Post.create(content: "Deep space. The loneliest place of all.", image_url: "http://wallpaperswide.com/deep_space-wallpapers.html", astronaut: astronaut24)
+post19 = Post.create(content: "So glad to be coming home soon. I miss my family.", astronaut: astronaut31)
+post20 = Post.create(content: "Whoa! Zero grav is FREAKIN' me out, man! Ahhhhhhhh!!!", astronaut: astronaut34)
+post21 = Post.create(content: "Woof! Woof woof! Aroooooooooooo!!", astronaut: astronaut35)
 
-# spacetag1  = SpaceTag.create(x: 23.5, y: 13.7, z: 120.1, relational_body: "Earth", units: "km", post: post1)
-# spacetag2  = SpaceTag.create(x: 73, y: 40, z: 273, relational_body: "Earth", units: "km", post: post2)
-# spacetag3  = SpaceTag.create(x: 243, y: 1032, z: 2374, relational_body: "Mars", units: "km", post: post3)
-# spacetag4  = SpaceTag.create(x: 12, y: 42, z: 189.4, relational_body: "Earth", units: "km", post: post4)
-# spacetag5  = SpaceTag.create(x: 273, y: 125, z: 1013, relational_body: "Solar Center", units: "Mkm", post: post5)
-# spacetag6  = SpaceTag.create(x: 72, y: 55, z: 332, relational_body: "Earth", units: "km", post: post6)
-# spacetag7  = SpaceTag.create(x: 92, y: 36, z: 121, relational_body: "Earth", units: "km", post: post7)
-# spacetag8  = SpaceTag.create(x: 44, y: 46, z: 211, relational_body: "Moon", units: "km", post: post8)
-# spacetag9  = SpaceTag.create(x: 76, y: 61, z: 150, relational_body: "Earth", units: "km", post: post9)
-# spacetag10 = SpaceTag.create(x: 426, y: 905, z: 5352, relational_body: "Saturn", units: "km", post: post10)
-# spacetag11 = SpaceTag.create(x: 266, y: 408, z: 2450, relational_body: "Venus", units: "km", post: post11)
-# spacetag12 = SpaceTag.create(x: 723.4, y: 43.8, z: 10354.2, relational_body: "Earth", units: "km", post: post12)
-# spacetag13 = SpaceTag.create(x: 402.0, y: 106.8, z: 538.9, relational_body: "Earth", units: "km", post: post13)
-# spacetag14 = SpaceTag.create(x: 23, y: 63, z: 291, relational_body: "Moon", units: "km", post: post14)
-# spacetag15 = SpaceTag.create(x: 63, y: 231, z: 0, relational_body: "Moon", units: "km", post: post15)
-# spacetag16 = SpaceTag.create(x: 72, y: 23.0, z: 4.3, relational_body: "Solar Center", units: "Mkm", post: post16)
-# spacetag17 = SpaceTag.create(x: 45, y: 13, z: 27, relational_body: "Proxima Centurai", units: "LY", post: post17)
-# spacetag18 = SpaceTag.create(x: 10354, y: 29943, z: 5419, relational_body: "Galactic Center", units: "LY", post: post18)
-# spacetag19 = SpaceTag.create(x: 588.3, y: 2321.9, z: 901.5, relational_body: "Earth", units: "km", post: post19)
-# spacetag20 = SpaceTag.create(x: 81, y: 440.9, z: 5633.6, relational_body: "Jupiter", units: "km", post: post20)
-# spacetag21 = SpaceTag.create(x: 70, y: 509, z: 150, relational_body: "Earth", units: "km", post: post21)
+spacetag1  = SpaceTag.create(x: 23.5, y: 13.7, z: 120.1, relational_body: "Earth", units: "km", post: post1)
+spacetag2  = SpaceTag.create(x: 73, y: 40, z: 273, relational_body: "Earth", units: "km", post: post2)
+spacetag3  = SpaceTag.create(x: 243, y: 1032, z: 2374, relational_body: "Mars", units: "km", post: post3)
+spacetag4  = SpaceTag.create(x: 12, y: 42, z: 189.4, relational_body: "Earth", units: "km", post: post4)
+spacetag5  = SpaceTag.create(x: 273, y: 125, z: 1013, relational_body: "Solar Center", units: "Mkm", post: post5)
+spacetag6  = SpaceTag.create(x: 72, y: 55, z: 332, relational_body: "Earth", units: "km", post: post6)
+spacetag7  = SpaceTag.create(x: 92, y: 36, z: 121, relational_body: "Earth", units: "km", post: post7)
+spacetag8  = SpaceTag.create(x: 44, y: 46, z: 211, relational_body: "Moon", units: "km", post: post8)
+spacetag9  = SpaceTag.create(x: 76, y: 61, z: 150, relational_body: "Earth", units: "km", post: post9)
+spacetag10 = SpaceTag.create(x: 426, y: 905, z: 5352, relational_body: "Saturn", units: "km", post: post10)
+spacetag11 = SpaceTag.create(x: 266, y: 408, z: 2450, relational_body: "Venus", units: "km", post: post11)
+spacetag12 = SpaceTag.create(x: 723.4, y: 43.8, z: 10354.2, relational_body: "Earth", units: "km", post: post12)
+spacetag13 = SpaceTag.create(x: 402.0, y: 106.8, z: 538.9, relational_body: "Earth", units: "km", post: post13)
+spacetag14 = SpaceTag.create(x: 23, y: 63, z: 291, relational_body: "Moon", units: "km", post: post14)
+spacetag15 = SpaceTag.create(x: 63, y: 231, z: 0, relational_body: "Moon", units: "km", post: post15)
+spacetag16 = SpaceTag.create(x: 72, y: 23.0, z: 4.3, relational_body: "Solar Center", units: "Mkm", post: post16)
+spacetag17 = SpaceTag.create(x: 45, y: 13, z: 27, relational_body: "Proxima Centurai", units: "LY", post: post17)
+spacetag18 = SpaceTag.create(x: 10354, y: 29943, z: 5419, relational_body: "Galactic Center", units: "LY", post: post18)
+spacetag19 = SpaceTag.create(x: 588.3, y: 2321.9, z: 901.5, relational_body: "Earth", units: "km", post: post19)
+spacetag20 = SpaceTag.create(x: 81, y: 440.9, z: 5633.6, relational_body: "Jupiter", units: "km", post: post20)
+spacetag21 = SpaceTag.create(x: 70, y: 509, z: 150, relational_body: "Earth", units: "km", post: post21)
 
 comment1  = Comment.create(content: "Having fun up there??", post: post1, user: user1)
 comment2  = Comment.create(content: "Dude! That's so cool! We're all jealous of you down here :D", post: post1, user: user5)
