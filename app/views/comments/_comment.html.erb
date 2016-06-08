@@ -5,7 +5,7 @@
         <img src="<%= asset_path(comment.user.headshot) %>">
       </div>
       <div class="col-xs-4 username">
-        <h4><%= comment.user.username %></h4>
+        <h4><%= link_to comment.user.username, comment.user %></h4>
       </div>
       <div class="col-xs-7 content">
         <p><%= comment.content %></p>
