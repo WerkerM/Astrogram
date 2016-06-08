@@ -20,6 +20,14 @@ img {
   box-shadow: 3px 3px 2px black;
   padding:20px;
   margin:40px;
+  background-color: #fdfdfd;
+  .post-body {
+    border: 1px solid #f3f3f3;
+    border-radius: 15px;
+    padding:20px;
+    box-shadow: 1px 1px 1px #e0e0e0;
+    background-color: white;
+  }
   .media {
     margin-bottom:15px;
   }
@@ -44,6 +52,20 @@ img {
   }
 }
 
+
+.space-tag {
+  margin-top: -5px;
+  font-size: 95%;
+}
+.space-tag-strong {
+  font-weight:600;
+  display:inline;
+}
+.space-tag-coords {
+  display:inline;
+  font-size:80%;
+}
+
 .new-post {
   width:600px;
   border: 1px solid #999999;
@@ -51,6 +73,7 @@ img {
   box-shadow: 3px 3px 2px black;
   padding:20px;
   margin:40px;
+  background-color: #fdfdfd;
 
   .media-preview {
     padding-top: 20px;
@@ -61,5 +84,5 @@ img {
 }
 
 .lower {
-    margin-top: 15px;
-  }
+  margin-top: 15px;
+}

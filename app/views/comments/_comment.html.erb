@@ -2,7 +2,7 @@
   <div class = "comment">
     <div class="row">
       <div class="col-xs-1 image">
-        <img src="<%= asset_path( 'astronaut-headshot.png' ) %>">
+        <img src="<%= asset_path(comment.user.headshot) %>">
       </div>
       <div class="col-xs-4 username">
         <h4><%= comment.user.username %></h4>

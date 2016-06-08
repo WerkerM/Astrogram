@@ -36,14 +36,14 @@ module PostHelper
   end
 
   def format_stardate_and_space_tag(post)
-    "#{star_date(post)}<br>#{space_tag(post)}".html_safe if post.space_tag.x
+    "#{space_tag(post)}".html_safe if post.space_tag.x
   end
 
   def star_date(post)
     if post.created_at
       date = post.created_at
       stardate = "#{date.year - 1900}#{date.month.to_s.rjust(2, "0")}.#{date.day.to_s.rjust(2, "0")}"
-      "Stardate #{stardate}"
+      "#{stardate}"
     end
   end
 
@@ -51,10 +51,10 @@ module PostHelper
     if post.space_tag
       space_tag = post.space_tag
       units = space_tag.units
-      "Orbiting #{space_tag.relational_body}<br>
-      X: #{space_tag.x} #{units}<br>
-      Y: #{space_tag.y} #{units}<br>
-      Z: #{space_tag.z} #{units}".html_safe
+
+      "<div class='space-tag'>on <div class='space-tag-strong'>#{star_date(post)}</div>
+      while orbiting <div class='space-tag-strong'>#{space_tag.relational_body}</div></br>
+      <div class='space-tag-coords'>#{space_tag.x} #{units},  #{space_tag.y} #{units},  #{space_tag.z} #{units}</div></div>".html_safe
     end
   end
 end
