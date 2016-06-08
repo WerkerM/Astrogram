@@ -38,9 +38,10 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'rspec-rails'
-  gem 'capybara-webkit'
+  gem 'capybara', '~> 2.7', '>= 2.7.1'
   gem 'figaro'
   gem 'rails-controller-testing'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 end
 
 group :development do

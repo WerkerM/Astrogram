@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "home#index"
   resources :users, only: [:create, :show]
-  resources :posts, except: [:edit, :update]
+  resources :posts, except: [:edit, :update, :new]
   resources :comments, only: [:create]
 
   get '/astronauts', to: 'users#astronauts'
