@@ -27,4 +27,13 @@ class User < ApplicationRecord
     self.followed.where(user: user).any? ? true : false
   end
 
+  def headshot
+    if self.astronaut?
+      file = (id.to_s.last)
+      file + '.png'
+    else
+      self.id % 2 == 0 ? 'earthling.png' : 'earthling2.png'
+    end
+  end
+
 end

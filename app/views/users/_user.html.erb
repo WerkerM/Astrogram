@@ -1,7 +1,8 @@
 <div class="user">
   <div class="row">
     <div class="col-xs-3">
-      <div class="image"><img src="<%= asset_path( 'astronaut-headshot.png' ) %>"></div>
+      <!-- <div class="image"><img src="<%= asset_path( 'astronaut-headshot.png' ) %>"></div> -->
+      <div class="image"><img src="<%= asset_path(user.headshot) %>"></div>
       <%= view_if_astronaut(user) %>
     </div>
     <div class="col-xs-7"><h3 class="username"><%= link_to user.name, user %></h3></div>
