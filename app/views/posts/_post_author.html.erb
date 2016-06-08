@@ -1,9 +1,12 @@
 <div class="post-author">
   <div class="row">
-    <div class="col-xs-2 image"><img src="<%= asset_path( 'astronaut-headshot.png' ) %>"></div>
-    <div class="col-xs-6 username"><h3><%= link_to post.astronaut.name, post.astronaut %></h3></div>
-    <div class="col-xs-4 timestamp">
+    <div class="col-xs-2 image"><img src="<%= asset_path(post.astronaut.headshot) %>"></div>
+    <div class="col-xs-7 username">
+      <h3><%= link_to post.astronaut.name, post.astronaut %></h3>
       <%= format_stardate_and_space_tag(post) %>
+    </div>
+    <div class="col-xs-3 timestamp">
+      <%= render_follow_button(post.astronaut, current_user) %>
     </div>
   </div>
 </div>
