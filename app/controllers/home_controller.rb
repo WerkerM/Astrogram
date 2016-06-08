@@ -3,6 +3,9 @@ class HomeController < ApplicationController
 
   def index
     @posts = FeedPersonalizer.create(current_user)
-    @post = current_user.posts.build if current_user
+    if current_user
+      @post = current_user.posts.build
+      @post.space_tag = SpaceTag.new
+    end
   end
 end

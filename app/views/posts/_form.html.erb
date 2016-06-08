@@ -12,8 +12,17 @@
     <div class="form-group">
       <%= f.text_field :video_url, placeholder: "Video link", class: "form-control input-lg" %>
     </div>
-
-      <%= f.submit :post, class: "btn btn-default btn-lg" %>
+    
+    <div class="form-group">
+      <%= f.fields_for @post.space_tag do |tag| %>
+      <%= tag.number_field :x, placeholder: "x", class: "input-lg col-xs-2 small-input", step: "any" %>
+      <%= tag.number_field :y, placeholder: "y", class: "input-lg col-xs-2 small-input", step: "any" %>
+      <%= tag.number_field :z, placeholder: "z", class: "input-lg col-xs-2 small-input", step: "any" %>
+      <%= tag.select(:relational_body, relationalBodies, {prompt: "Orbiting"}, {class: "input-lg col-xs-3"}) %>
+      <%= tag.select(:units, unitsOfDistance, {prompt: "Units"}, {class: "input-lg col-xs-3"}) %>
+      <% end %>
+    </div>
+      <%= f.submit :post, class: "btn btn-default btn-lg lower" %>
     <% end %>
     <div class="media-preview"></div>
   </div>
