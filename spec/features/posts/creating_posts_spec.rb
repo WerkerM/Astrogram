@@ -1,6 +1,5 @@
-require 'rails_helper'
 
-describe "creating posts" do
+describe "creating posts", js: true do
 
   context "when the user is an astronaut" do
 
