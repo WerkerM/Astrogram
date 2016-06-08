@@ -2,15 +2,15 @@ module UsersHelper
   def render_follow_button(astronaut, user)
     if astronaut.astronaut? && astronaut != current_user
       if astronaut.followed_by?(user)
-        follow_button_markup(following).html_safe
+        follow_button_markup(following, astronaut).html_safe
       else
-        follow_button_markup(follow).html_safe
+        follow_button_markup(follow, astronaut).html_safe
       end
     end
   end
 
-  def follow_button_markup(status)
-    "<div class='follow' astronaut_id='#{@user.id}'>
+  def follow_button_markup(status, astronaut)
+    "<div class='follow' data-astronaut-id='#{astronaut.id}'>
       <div class='btn btn-info btn-lg follow-button'>#{status}</div>
     </div>"
   end
@@ -33,8 +33,18 @@ module UsersHelper
   end
 
   def render_astronaut_badge(agency_domain)
-    "<span data-toggle='tooltip' data-placement='top' title='Verified Astronaut' class='verification pull-right glyphicon glyphicon-ok-circle' aria-hidden='true'>
-    </span><div class='verification pull-right'>#{image_tag(agency_domain + '.jpg', class: 'space-badge')}
+    # mike's original
+    # "<span data-toggle='tooltip' data-placement='top' title='Verified Astronaut' class='verification pull-right glyphicon glyphicon-ok-circle' aria-hidden='true'>
+    # </span><div class='verification pull-right'>#{image_tag(agency_domain + '.jpg', class: 'space-badge')}
+    # </div>".html_safe
+
+    # checkmark
+    # "<span data-toggle='tooltip' data-placement='top' title='Verified Astronaut' class='verification pull-right glyphicon glyphicon-ok-circle' aria-hidden='true'>
+    # </span>
+
+
+
+    "<div class='space-badge'>#{image_tag(agency_domain + '.jpg')}
     </div>".html_safe
   end
 
