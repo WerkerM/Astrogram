@@ -30,6 +30,7 @@ class User < ApplicationRecord
   def headshot
     if self.astronaut?
       file = (id.to_s.last)
+      file == "0" ? file = "1" : file
       file + '.png'
     else
       self.id % 2 == 0 ? 'earthling.png' : 'earthling2.png'
