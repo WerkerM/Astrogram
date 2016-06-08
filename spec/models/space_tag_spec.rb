@@ -1,7 +1,5 @@
-require 'rails_helper'
 
 RSpec.describe SpaceTag, :type => :model do
-
 
   let(:new_post) { Post.new(content: "Best post eva, fo reel") }
   let(:new_tag) { SpaceTag.new(x: 10, y: 20, z: 300, units: "km", relational_body: "Earth", post: new_post) }
