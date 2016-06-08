@@ -6,4 +6,8 @@ module ApplicationHelper
       "<div>#{link_to('Sign Up', '/signup')} | #{link_to('Sign In', '/login')}</div>".html_safe
     end
   end
+
+  def people_links
+    "<div class='pull-right'>#{link_to('Astronauts', astronauts_path)} | #{link_to('Earthlings', earthlings_path)}</div>".html_safe
+  end
 end
