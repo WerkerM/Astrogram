@@ -43,6 +43,7 @@ group :development, :test do
   gem 'figaro'
   gem 'rails-controller-testing'
   gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+  gem 'selenium-webdriver', '~> 2.53'
 end
 
 group :development do
