@@ -62,6 +62,7 @@ astronaut31 = User.create(name: "Buzz Lightyear", username: "buzzlightyear", ema
 astronaut32 = User.create(name: "Justin Nazari", username: "jspaceman", email: "justin@space-rangers.space", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
 astronaut33 = User.create(name: "Jean-Luc Picard", username: "jeanluc", email: "jeanluc@starfleet.gov", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
 astronaut34 = User.create(name: "Antoin Campbell", username: "antoinbaby", email: "jeanluc@nasa.gov", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
+astronaut35 = User.create(name: "Laika", username: "laikadoggy", email: "ontheinternetnobodyknowsyoureadog@tsniimash.ru", password: "password", password_confirmation: "password", astronaut: true, confirmed: true)
 
 
 follow1 = Follow.create(user: user1, astronaut: astronaut1)
@@ -111,6 +112,7 @@ post17 = Post.create(content: "This is the life for me.", astronaut: astronaut5)
 post18 = Post.create(content: "Deep space. The loneliest place of all.", image_url: "http://wallpaperswide.com/deep_space-wallpapers.html", astronaut: astronaut24)
 post19 = Post.create(content: "So glad to be coming home soon. I miss my family.", astronaut: astronaut31)
 post20 = Post.create(content: "Whoa! Zero grav is FREAKIN' me out, man! Ahhhhhhhh!!!", astronaut: astronaut34)
+post21 = Post.create(content: "Woof! Woof woof! Aroooooooooooo!!", astronaut: astronaut35)
 
 comment1 = Comment.create(content: "Having fun up there??", post: post1, user: user1)
 comment2 = Comment.create(content: "Dude! That's so cool! We're all jealous of you down here :D", post: post1, user: user5)
@@ -133,3 +135,4 @@ comment18 = Comment.create(content: "It really is.", post: post13, user: user19)
 comment19 = Comment.create(content: "Whoa dude. Check out that view!", post: post16, user: user2)
 comment20 = Comment.create(content: "*eats his sirloin and pities you*", post: post14, user: user6)
 comment21 = Comment.create(content: "Antoin! Remember! The enemy's gate is down!", post: post20, user: user11)
+comment22 = Comment.create(content: "Aww, good doggy! *pet pet*", post: post21, user: astronaut15)
