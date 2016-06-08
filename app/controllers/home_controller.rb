@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @posts = FeedPersonalizer.create(current_user).order(created_at: :DESC)
     if current_user
       @post = current_user.posts.build
-      @post.space_tag = SpaceTag.new
+      @space_tag = SpaceTag.new(post: @post)
     end
   end
 end
