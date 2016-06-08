@@ -1,4 +1,3 @@
-require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
@@ -36,6 +35,7 @@ RSpec.describe User, type: :model do
     it "knows its follows" do
       expect(new_astronaut.followed).to include(new_follow)
     end
+
   end
 
   context "is a puny earthling" do
@@ -50,5 +50,6 @@ RSpec.describe User, type: :model do
     it "cannot be followed" do
       expect(bad_follow.save).to be_falsey
     end
+    
   end
 end

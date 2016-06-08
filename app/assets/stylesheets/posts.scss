@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.row {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 img {
   width: 560px;
 }
@@ -32,7 +39,8 @@ img {
   .timestamp {
     color: #444444;
     text-align:right;
-    margin-top:25px;
+    margin-top:5px;
+    margin-bottom:20px;
   }
 }
 
@@ -47,4 +55,11 @@ img {
   .media-preview {
     padding-top: 20px;
   }
+  .small-input {
+    float:left;
+  }
 }
+
+.lower {
+    margin-top: 15px;
+  }

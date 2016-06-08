@@ -1,4 +1,3 @@
-require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
 
@@ -28,7 +27,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it "can see a user profile" do
-      get :show, {id: astronaut.id}
+      get :show, params: {id: astronaut.id}
       expect(response).to render_template(:show)
     end
   end
@@ -39,7 +38,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it "can see a user profile" do
-      get :show, {id: earthling.id}
+      get :show, params: {id: earthling.id}
       expect(response).to render_template(:show)
     end
   end
@@ -50,7 +49,7 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it "redirects to the root path with an alert" do
-      get :show, {id: bad_user.id}
+      get :show, params: {id: bad_user.id}
       expect(response).to redirect_to(root_path)
       expect(flash[:alert]).to eq("User does not exist.")
     end
@@ -58,7 +57,7 @@ RSpec.describe UsersController, type: :controller do
     it "can confirm its email" do
       bad_user.gen_email_token
       bad_user.save
-      get :confirm_email, {email_token: bad_user.email_token}
+      get :confirm_email, params: {email_token: bad_user.email_token}
       expect(User.first.confirmed).to eq(true)
       expect(response).to redirect_to(bad_user)
     end

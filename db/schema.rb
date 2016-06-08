@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160604174943) do
+ActiveRecord::Schema.define(version: 20160608025809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(version: 20160604174943) do
     t.index ["astronaut_id"], name: "index_posts_on_astronaut_id", using: :btree
   end
 
+  create_table "space_tags", force: :cascade do |t|
+    t.float    "x"
+    t.float    "y"
+    t.float    "z"
+    t.string   "relational_body"
+    t.string   "units"
+    t.integer  "post_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["post_id"], name: "index_space_tags_on_post_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "username"
@@ -57,4 +69,5 @@ ActiveRecord::Schema.define(version: 20160604174943) do
     t.string   "email_token"
   end
 
+  add_foreign_key "space_tags", "posts"
 end
