@@ -33,17 +33,6 @@ module UsersHelper
   end
 
   def render_astronaut_badge(agency_domain)
-    # mike's original
-    # "<span data-toggle='tooltip' data-placement='top' title='Verified Astronaut' class='verification pull-right glyphicon glyphicon-ok-circle' aria-hidden='true'>
-    # </span><div class='verification pull-right'>#{image_tag(agency_domain + '.jpg', class: 'space-badge')}
-    # </div>".html_safe
-
-    # checkmark
-    # "<span data-toggle='tooltip' data-placement='top' title='Verified Astronaut' class='verification pull-right glyphicon glyphicon-ok-circle' aria-hidden='true'>
-    # </span>
-
-
-
     "<div class='space-badge'>#{image_tag(agency_domain + '.jpg')}
     </div>".html_safe
   end
