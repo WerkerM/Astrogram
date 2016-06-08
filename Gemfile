@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'carrierwave', '~> 0.11.2'
 gem 'fog'
+gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
