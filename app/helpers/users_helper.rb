@@ -38,6 +38,7 @@ module UsersHelper
   end
 
   def render_puny_earthling
-    "<div class='verification pull-right'>Earthling</div>".html_safe
+    "<div class='earthling-badge'>#{image_tag('earth.png')}
+    </div>".html_safe
   end
 end
