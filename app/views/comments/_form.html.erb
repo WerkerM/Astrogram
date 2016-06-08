@@ -1,12 +1,12 @@
 <div class = "new-comment">
-  <%= form_for post.comments.new do |f| %>
+  <%= form_for(post.comments.new, remote: true) do |f| %>
   <div class="form-inline">
     <%= f.hidden_field :post_id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <div class = "form-group">
       <%= f.text_field :content, class: "form-control input-lg" %>
     </div>
-    <%= f.submit :comment, class: "btn btn-default btn-lg" %>
+    <%= f.submit :comment, class: "btn btn-default btn-lg comment-submit" %>
   </div>
   <% end %>
 </div>
