@@ -11,7 +11,7 @@ module UsersHelper
 
   def follow_button_markup(status, astronaut)
     "<div class='follow' data-astronaut-id='#{astronaut.id}'>
-      <div class='btn btn-info btn-lg follow-button'>#{status}</div>
+      <div class='btn btn-info btn-lg follow-button' data-astronaut-id='#{astronaut.id}'>#{status}</div>
     </div>"
   end
 

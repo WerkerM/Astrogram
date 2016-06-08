@@ -6,10 +6,11 @@ class FollowUpdater
     @user = user
   end
 
-  def do
+  def execute
     if astronaut.followed_by?(user)
       self.remove_follow
-      { :status => 'not following' }
+      { :status => 'not following',
+        :astronaut_id => astronaut.id }
     else
       self.add_follow
       { :astronaut_id => astronaut.id,
