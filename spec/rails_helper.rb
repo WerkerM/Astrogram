@@ -14,3 +14,11 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.infer_spec_type_from_file_location!
 end
+
+def login(current_user)
+  visit '/login'
+  # binding.pry
+  fill_in "user_username", with: current_user.username
+  fill_in "user_password", with: current_user.password
+  click_button "Log In"
+end
