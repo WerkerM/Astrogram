@@ -15,11 +15,11 @@
     
     <div class="form-group">
       <%= f.fields_for :space_tag do |tag| %>
-      <%= tag.number_field :x, placeholder: "x", class: "input-lg col-xs-2 small-input", step: "any" %>
-      <%= tag.number_field :y, placeholder: "y", class: "input-lg col-xs-2 small-input", step: "any" %>
-      <%= tag.number_field :z, placeholder: "z", class: "input-lg col-xs-2 small-input", step: "any" %>
+      <%= tag.text_field :polar, placeholder: "Polar", class: "input-lg col-xs-2 small-input", step: "any" %>
+      <%= tag.text_field :azimuth, placeholder: "Azim", class: "input-lg col-xs-2 small-input", step: "any" %>
+      <%= tag.text_field :radius, placeholder: "Radius", class: "input-lg col-xs-2 small-input", step: "any" %>
       <%= tag.select(:relational_body, relationalBodies, { prompt: "Orbiting" }, { class: "input-lg col-xs-3" }) %>
-      <%= tag.select(:units, unitsOfDistance, { prompt: "Units" }, { class: "input-lg col-xs-3" }) %>
+      <%= tag.select(:units, unitsOfDistance, { prompt: "Radius Units" }, { class: "input-lg col-xs-3" }) %>
       <% end %>
     </div>
       <%= f.submit :post, class: "btn btn-default btn-lg lower" %>

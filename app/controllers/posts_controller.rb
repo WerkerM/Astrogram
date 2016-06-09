@@ -28,10 +28,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:content, :astronaut_id, :image_url, :video_url, space_tag_attributes: [:x, :y, :z, :relational_body, :units])
+    params.require(:post).permit(:content, :astronaut_id, :image_url, :video_url, space_tag_attributes: [:polar, :azimuth, :radius, :relational_body, :units])
   end
-
-  # def space_tag_params
-  #   params[:post].require(:space_tag).permit(:x, :y, :z, :relational_body, :units)
-  # end
 end

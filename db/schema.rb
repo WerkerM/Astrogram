@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608025809) do
+ActiveRecord::Schema.define(version: 20160608213654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(version: 20160608025809) do
   end
 
   create_table "space_tags", force: :cascade do |t|
-    t.float    "x"
-    t.float    "y"
-    t.float    "z"
+    t.float    "polar"
+    t.float    "azimuth"
+    t.float    "radius"
     t.string   "relational_body"
     t.string   "units"
     t.integer  "post_id"
