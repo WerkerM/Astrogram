@@ -35,8 +35,12 @@ module PostHelper
     post.video_url.gsub("https://www.youtube.com/watch?v=", "")
   end
 
-  def format_stardate_and_space_tag(post)
-    "#{space_tag(post)}".html_safe if post.space_tag.x
+  def stardate_and_space_tag_tooltip(post)
+    "The StarDate is #{star_date(post)}.\n
+    This post was made at:\n
+    #{post.space_tag.polar}° polar\n
+    #{post.space_tag.azimuth}° azimuth\n
+    #{post.space_tag.radius} #{post.space_tag.units} radius".html_safe
   end
 
   def star_date(post)
@@ -47,14 +51,14 @@ module PostHelper
     end
   end
 
-  def space_tag(post)
+  def format_stardate_and_space_tag(post)
     if post.space_tag
       space_tag = post.space_tag
       units = space_tag.units
 
-      "<div class='space-tag'>on <div class='space-tag-strong'>#{star_date(post)}</div>
+      "<div class='space-tag' data-toggle='tooltip' data-placement='top' title='#{stardate_and_space_tag_tooltip(post)}'>on <div class='space-tag-strong'>#{star_date(post)}</div>
       while orbiting <div class='space-tag-strong'>#{space_tag.relational_body}</div></br>
-      <div class='space-tag-coords'>#{space_tag.x} #{units},  #{space_tag.y} #{units},  #{space_tag.z} #{units}</div></div>".html_safe
+      <div class='space-tag-coords'>#{space_tag.polar}°,  #{space_tag.azimuth}°,  #{space_tag.radius} #{units}</div></div>".html_safe
     end
   end
 end
