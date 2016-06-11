@@ -87,8 +87,11 @@ img {
   margin-top: 15px;
 }
 
-.tooltip {
+.tooltip-inner {
     white-space: pre-line;
     line-height: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
+
 
