@@ -37,7 +37,7 @@ module PostHelper
 
   def stardate_and_space_tag_tooltip(post)
     tag = post.space_tag
-    "The StarDate is #{star_date(post)}.\n
+    "The StarDate is #{star_date(post)}\n
     This post was made while\n
     orbiting #{tag.relational_body} at:\n
     #{tag.polar}° polar\n
