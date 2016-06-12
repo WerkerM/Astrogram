@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-  has_many :posts, foreign_key: "astronaut_id"
-  has_many :following, foreign_key: "user_id", class_name: "Follow"
-  has_many :followed, foreign_key: "astronaut_id", class_name: "Follow"
-  has_many :comments
+  has_many :posts, foreign_key: "astronaut_id", dependent: :destroy
+  has_many :following, foreign_key: "user_id", class_name: "Follow", dependent: :destroy
+  has_many :followed, foreign_key: "astronaut_id", class_name: "Follow", dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates_presence_of :name, :username, :email
 
