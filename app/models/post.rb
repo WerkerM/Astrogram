@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   validates_with PosterIsAstronaut
   accepts_nested_attributes_for :space_tag
 
-  mount_uploader :image_url, ImageUploader
+  # mount_uploader :image_url, ImageUploader
 
   def space_tag_attributes=(attributes)
     space_tag = SpaceTag.new(attributes)
