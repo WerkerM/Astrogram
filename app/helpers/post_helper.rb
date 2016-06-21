@@ -36,11 +36,13 @@ module PostHelper
   end
 
   def stardate_and_space_tag_tooltip(post)
-    "The StarDate is #{star_date(post)}.\n
-    This post was made at:\n
-    #{post.space_tag.polar}° polar\n
-    #{post.space_tag.azimuth}° azimuth\n
-    #{post.space_tag.radius} #{post.space_tag.units} radius".html_safe
+    tag = post.space_tag
+    "The StarDate is #{star_date(post)}\n
+    This post was made while\n
+    orbiting #{tag.relational_body} at:\n
+    #{tag.polar}° polar\n
+    #{tag.azimuth}° azimuth\n
+    #{tag.radius} #{post.space_tag.units} radius".html_safe
   end
 
   def star_date(post)

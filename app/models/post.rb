@@ -1,9 +1,10 @@
 class Post < ApplicationRecord
   include ActiveModel::Validations
 
-  has_one :space_tag
   belongs_to :astronaut, class_name: "User"
-  has_many :comments
+  has_one :space_tag, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  
   validates_with PosterIsAstronaut
   accepts_nested_attributes_for :space_tag
 
