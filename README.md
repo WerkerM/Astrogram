@@ -2,7 +2,7 @@
 
 A microblog for astronauts, wherein they're able to communicate with family back on their home planet (whatever it may be,) as well as share updates with planet-bound followers.
 
-When a user signs up, they verify their Email address during registration. If their Email domain corresponds to a verified space agency, they're verified as an astronaut (list of agencies contained in the app/services/email_verifier.rb file). Astronauts are able to create new blog posts, and receive the badge of their space agency on their profile page.
+When a user signs up, they verify their email address during registration. If their email domain corresponds to a verified space agency, they're verified as an astronaut (list of agencies contained in the app/services/email_verifier.rb file). Astronauts are able to create new blog posts, and receive the badge of their space agency on their profile page.
 
 In order to subscribe to an astronauts posts, any user can follow an astronaut. A user's landing page will be populated with posts from their followed posters, and any user is able to respond to a post with their own messages.
 
