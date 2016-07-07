@@ -1,6 +1,6 @@
 # Astrogram
 
-A microblog for astronauts, wherein they're able to communicate with family back on their home planet (whatever it may be,) as well as share updates with planet-bound followers.
+A microblog for astronautx. Here, astronauts are able to communicate with family back on their home planet (whatever it may be,) as well as share updates with planet-bound followers.
 
 When a user signs up, they verify their email address during registration. If their email domain corresponds to a verified space agency, they're verified as an astronaut (list of agencies contained in the app/services/email_verifier.rb file). Astronauts are able to create new blog posts, and receive the badge of their space agency on their profile page.
 
